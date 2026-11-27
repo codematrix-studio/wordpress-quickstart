@@ -7,7 +7,7 @@
 
 get_header();
 ?>
-<main class="site-main container">
+<main id="primary" class="site-main container">
     <?php if ( have_posts() ) : ?>
         <?php while ( have_posts() ) : ?>
             <?php the_post(); ?>

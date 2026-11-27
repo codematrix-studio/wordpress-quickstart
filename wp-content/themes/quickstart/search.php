@@ -7,7 +7,7 @@
 
 get_header();
 ?>
-<main class="site-main container">
+<main id="primary" class="site-main container">
     <header class="archive-header">
         <h1 class="archive-title">
             <?php
