@@ -18,6 +18,7 @@ if ( post_password_required() ) {
             printf(
                 esc_html(
                     _n(
+                        /* translators: %s — количество комментариев. */
                         'Комментарий: %s',
                         'Комментарии: %s',
                         get_comments_number(),
