@@ -51,4 +51,4 @@ jobs:
         run: sass --no-source-map --style=expanded frontend/scss/main.scss /tmp/quickstart-main.css
 
       - name: Проверить актуальность CSS
-        run: diff --ignore-all-space --unified=3 wp-content/themes/quickstart/assets/css/main.css /tmp/quickstart-main.css
+        run: diff --unified=3 wp-content/themes/quickstart/assets/css/main.css /tmp/quickstart-main.css
