@@ -31,10 +31,12 @@ if ( post_password_required() ) {
         </h2>
         <ol class="comment-list">
             <?php
-            wp_list_comments( array(
-                'style'      => 'ol',
-                'short_ping' => true,
-            ) );
+            wp_list_comments(
+                array(
+                    'style'      => 'ol',
+                    'short_ping' => true,
+                )
+            );
             ?>
         </ol>
         <?php the_comments_navigation(); ?>

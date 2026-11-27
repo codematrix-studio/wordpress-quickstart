@@ -18,12 +18,14 @@ function quickstart_the_menu( string $location ): void {
         return;
     }
 
-    wp_nav_menu( array(
-        'theme_location'  => $location,
-        'container'       => 'nav',
-        'container_class' => 'site-menu site-menu--' . sanitize_html_class( $location ),
-        'fallback_cb'     => false,
-    ) );
+    wp_nav_menu(
+        array(
+            'theme_location'  => $location,
+            'container'       => 'nav',
+            'container_class' => 'site-menu site-menu--' . sanitize_html_class( $location ),
+            'fallback_cb'     => false,
+        )
+    );
 }
 
 /**
