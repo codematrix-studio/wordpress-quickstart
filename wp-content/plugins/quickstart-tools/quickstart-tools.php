@@ -11,13 +11,3 @@
  */
 
 defined( 'ABSPATH' ) || exit;
-
-/**
- * Инициализирует расширение после загрузки WordPress.
- *
- * @return void
- */
-function quickstart_tools_init(): void {
-    // Добавляйте хуки и функциональность по мере появления конкретной задачи.
-}
-add_action( 'init', 'quickstart_tools_init' );

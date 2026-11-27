@@ -34,6 +34,7 @@
 /wp-content/advanced-cache.php
 /wp-content/object-cache.php
 /wp-content/db.php
+/wp-content/themes/quickstart/assets/css/main.css.map
 
 # Системные и IDE-файлы
 /.idea/

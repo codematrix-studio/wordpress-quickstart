@@ -1,4 +1,4 @@
-name: Проверка синтаксиса PHP
+name: Проверки PHP и SCSS
 
 on:
   push:
@@ -30,3 +30,22 @@ jobs:
           find wp-content/themes/quickstart wp-content/plugins/quickstart-tools \
             -type f -name '*.php' -print0 |
             xargs -0 -n 1 php -l
+
+  scss-check:
+    name: Компиляция SCSS
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Получить исходный код
+        uses: actions/checkout@v4
+
+      - name: Установить Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Установить Dart Sass
+        run: npm install --global sass
+
+      - name: Проверить компиляцию SCSS
+        run: sass --no-source-map --style=expanded frontend/scss/main.scss /tmp/quickstart-main.css
