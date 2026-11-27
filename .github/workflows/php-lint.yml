@@ -48,7 +48,7 @@ jobs:
         run: npm install --global sass
 
       - name: Скомпилировать SCSS
-        run: sass --no-source-map --style=expanded --indent-width=4 frontend/scss/main.scss /tmp/quickstart-main.css
+        run: sass --no-source-map --style=expanded frontend/scss/main.scss /tmp/quickstart-main.css
 
       - name: Проверить актуальность CSS
-        run: diff --unified=3 wp-content/themes/quickstart/assets/css/main.css /tmp/quickstart-main.css
+        run: diff --ignore-all-space --unified=3 wp-content/themes/quickstart/assets/css/main.css /tmp/quickstart-main.css

@@ -18,12 +18,17 @@ function quickstart_the_menu( string $location ): void {
         return;
     }
 
+    $container_label = 'footer' === $location
+        ? __( 'Навигация в подвале', 'quickstart' )
+        : __( 'Основная навигация', 'quickstart' );
+
     wp_nav_menu(
         array(
-            'theme_location'  => $location,
-            'container'       => 'nav',
-            'container_class' => 'site-menu site-menu--' . sanitize_html_class( $location ),
-            'fallback_cb'     => false,
+            'theme_location'      => $location,
+            'container'           => 'nav',
+            'container_class'     => 'site-menu site-menu--' . sanitize_html_class( $location ),
+            'container_aria_label' => $container_label,
+            'fallback_cb'         => false,
         )
     );
 }
