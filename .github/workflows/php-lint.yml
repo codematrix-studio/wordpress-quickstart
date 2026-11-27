@@ -47,5 +47,8 @@ jobs:
       - name: Установить Dart Sass
         run: npm install --global sass
 
-      - name: Проверить компиляцию SCSS
+      - name: Скомпилировать SCSS
         run: sass --no-source-map --style=expanded frontend/scss/main.scss /tmp/quickstart-main.css
+
+      - name: Проверить актуальность CSS
+        run: diff --unified=3 wp-content/themes/quickstart/assets/css/main.css /tmp/quickstart-main.css
