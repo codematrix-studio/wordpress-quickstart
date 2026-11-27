@@ -13,6 +13,7 @@
 </head>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Перейти к содержимому', 'quickstart' ); ?></a>
 <header class="site-header">
     <div class="container site-header__inner">
         <?php quickstart_the_site_identity(); ?>

@@ -17,7 +17,12 @@ if ( post_password_required() ) {
             <?php
             printf(
                 esc_html(
-                    _n( 'Комментарий: %s', 'Комментарии: %s', get_comments_number(), 'quickstart' )
+                    _n(
+                        'Комментарий: %s',
+                        'Комментарии: %s',
+                        get_comments_number(),
+                        'quickstart'
+                    )
                 ),
                 esc_html( number_format_i18n( get_comments_number() ) )
             );

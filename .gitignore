@@ -15,14 +15,11 @@
 /license.txt
 /readme.html
 
-# Сторонние темы и плагины: в репозитории хранятся только заготовки Quickstart
-/wp-content/plugins/*
-!/wp-content/plugins/quickstart-tools/
-!/wp-content/plugins/quickstart-tools/**
-/wp-content/themes/*
-!/wp-content/themes/quickstart/
-!/wp-content/themes/quickstart/**
-/wp-content/mu-plugins/*
+# Стандартные сторонние компоненты, поставляемые с WordPress
+/wp-content/plugins/akismet/
+/wp-content/plugins/hello.php
+/wp-content/themes/twentytwenty*/
+/wp-content/mu-plugins/akismet.php
 
 # Пользовательские данные и временные файлы
 /wp-content/uploads/
