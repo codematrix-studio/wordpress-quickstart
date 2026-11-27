@@ -1,19 +1,41 @@
+# Локальная конфигурация WordPress
 /wp-config.php
 /wp-config-*.php
 /.htaccess
+/.maintenance
+/php.ini
+/.user.ini
+
+# Ядро WordPress
+/index.php
 /wp-admin/
 /wp-includes/
 /wp-*.php
 /xmlrpc.php
 /license.txt
 /readme.html
+
+# Сторонние темы и плагины: в репозитории хранятся только заготовки Quickstart
+/wp-content/plugins/*
+!/wp-content/plugins/quickstart-tools/
+!/wp-content/plugins/quickstart-tools/**
+/wp-content/themes/*
+!/wp-content/themes/quickstart/
+!/wp-content/themes/quickstart/**
+/wp-content/mu-plugins/*
+
+# Пользовательские данные и временные файлы
 /wp-content/uploads/
+/wp-content/languages/
 /wp-content/cache/
 /wp-content/upgrade/
 /wp-content/backup*/
+/wp-content/ai1wm-backups/
 /wp-content/advanced-cache.php
 /wp-content/object-cache.php
 /wp-content/db.php
+
+# Системные и IDE-файлы
 /.idea/
 /.vscode/
 .DS_Store
