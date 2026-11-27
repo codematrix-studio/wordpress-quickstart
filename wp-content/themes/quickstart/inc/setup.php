@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
  * @return void
  */
 function quickstart_setup(): void {
-    load_theme_textdomain( 'wordpress-quickstart', get_template_directory() . '/languages' );
+    load_theme_textdomain( 'quickstart', get_template_directory() . '/languages' );
 
     add_theme_support( 'title-tag' );
     add_theme_support( 'post-thumbnails' );
@@ -35,8 +35,8 @@ function quickstart_setup(): void {
     ) );
 
     register_nav_menus( array(
-        'primary' => __( 'Основное меню', 'wordpress-quickstart' ),
-        'footer'  => __( 'Меню в подвале', 'wordpress-quickstart' ),
+        'primary' => __( 'Основное меню', 'quickstart' ),
+        'footer'  => __( 'Меню в подвале', 'quickstart' ),
     ) );
 }
 add_action( 'after_setup_theme', 'quickstart_setup' );

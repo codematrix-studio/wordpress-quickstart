@@ -13,7 +13,7 @@ get_header();
             <?php
             printf(
                 /* translators: %s — поисковый запрос. */
-                esc_html__( 'Результаты поиска: %s', 'wordpress-quickstart' ),
+                esc_html__( 'Результаты поиска: %s', 'quickstart' ),
                 esc_html( get_search_query() )
             );
             ?>

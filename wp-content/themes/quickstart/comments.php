@@ -17,7 +17,7 @@ if ( post_password_required() ) {
             <?php
             printf(
                 esc_html(
-                    _n( 'Комментарий: %s', 'Комментарии: %s', get_comments_number(), 'wordpress-quickstart' )
+                    _n( 'Комментарий: %s', 'Комментарии: %s', get_comments_number(), 'quickstart' )
                 ),
                 esc_html( number_format_i18n( get_comments_number() ) )
             );
@@ -35,7 +35,7 @@ if ( post_password_required() ) {
     <?php endif; ?>
 
     <?php if ( ! comments_open() && get_comments_number() ) : ?>
-        <p class="no-comments"><?php esc_html_e( 'Обсуждение закрыто.', 'wordpress-quickstart' ); ?></p>
+        <p class="no-comments"><?php esc_html_e( 'Обсуждение закрыто.', 'quickstart' ); ?></p>
     <?php endif; ?>
 
     <?php comment_form(); ?>

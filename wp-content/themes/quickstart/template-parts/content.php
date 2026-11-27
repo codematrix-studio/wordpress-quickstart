@@ -15,7 +15,7 @@
         </p>
     </header>
     <?php if ( has_post_thumbnail() ) : ?>
-        <a class="entry__thumbnail" href="<?php echo esc_url( get_permalink() ); ?>">
+        <a class="entry__thumbnail" href="<?php the_permalink(); ?>">
             <?php the_post_thumbnail( 'large' ); ?>
         </a>
     <?php endif; ?>
