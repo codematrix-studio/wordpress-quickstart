@@ -34,6 +34,30 @@ jobs:
             -type f -name '*.php' -print0 |
             xargs -0 -n 1 php -l
 
+  wordpress-coding-standards:
+    name: WordPress Coding Standards
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Получить исходный код
+        uses: actions/checkout@v4
+
+      - name: Установить PHP и Composer
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          tools: composer:v2
+
+      - name: Установить WordPress Coding Standards
+        run: composer global require --no-interaction --no-progress wp-coding-standards/wpcs:3.4.1
+
+      - name: Проверить код по WPCS
+        run: |
+          PHPCS_BIN="$(composer global config bin-dir --absolute)/phpcs"
+          PHPCS_HOME="$(composer global config home)"
+          "$PHPCS_BIN" --config-set installed_paths "$PHPCS_HOME/vendor/wp-coding-standards/wpcs"
+          "$PHPCS_BIN" --standard=phpcs.xml.dist
+
   scss-check:
     name: Компиляция SCSS
     runs-on: ubuntu-latest
