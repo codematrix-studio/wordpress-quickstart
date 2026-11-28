@@ -15,9 +15,9 @@ if ( post_password_required() ) {
 	<?php if ( have_comments() ) : ?>
 		<h2 class="comments-title">
 			<?php
+			/* translators: %s — количество комментариев. */
 			printf(
 				esc_html(
-					/* translators: %s — количество комментариев. */
 					_n(
 						'Комментарий: %s',
 						'Комментарии: %s',
