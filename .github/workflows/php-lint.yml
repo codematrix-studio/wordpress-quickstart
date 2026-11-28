@@ -57,8 +57,6 @@ jobs:
       - name: Проверить код по WPCS
         run: |
           PHPCS_BIN="$(composer global config bin-dir --absolute)/phpcs"
-          PHPCS_HOME="$(composer global config home)"
-          "$PHPCS_BIN" --config-set installed_paths "$PHPCS_HOME/vendor/wp-coding-standards/wpcs"
           "$PHPCS_BIN" --standard=phpcs.xml.dist
 
   scss-check:
