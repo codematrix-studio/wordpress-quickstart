@@ -17,9 +17,9 @@ if ( post_password_required() ) {
 			<?php
 			printf(
 				esc_html(
-					_n(
 					/* translators: %s — количество комментариев. */
-					'Комментарий: %s',
+					_n(
+						'Комментарий: %s',
 						'Комментарии: %s',
 						get_comments_number(),
 						'quickstart'
