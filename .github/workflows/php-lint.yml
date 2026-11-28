@@ -48,6 +48,9 @@ jobs:
           php-version: '8.2'
           tools: composer:v2
 
+      - name: Разрешить установку Composer-плагина PHPCS
+        run: composer global config allow-plugins.dealerdirect/phpcodesniffer-composer-installer true
+
       - name: Установить WordPress Coding Standards
         run: composer global require --no-interaction --no-progress wp-coding-standards/wpcs:3.4.1
 
